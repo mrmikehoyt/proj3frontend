@@ -1,0 +1,19 @@
+.textContainer {
+  margin-left: 30px;
+  color: rgb(170, 26, 26);
+  justify-content: space-between;
+  border-style: solid;
+	border-radius: 8px;
+  border-color: #8dcc78;
+  height: 80%;
+  width: 20%;
+  align-items: center;
+}
+
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
