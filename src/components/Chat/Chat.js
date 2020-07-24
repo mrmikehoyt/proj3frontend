@@ -20,7 +20,7 @@ const Chat = ({location}) => {
   const [message, setMessage] = useState('');
 	const [messages, setMessages] = useState([]);
 
-	 const ENDPOINT = 'https://dry-tor-59504.herokuapp.com/';
+	 const ENDPOINT = 'https://aqueous-sands-97152.herokuapp.com/';
 	
 	useEffect(() => {
 		/**
