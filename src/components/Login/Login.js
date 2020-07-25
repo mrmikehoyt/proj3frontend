@@ -28,6 +28,7 @@ const SignUp = () => {
 		username: '',
 		password: ''
 	});
+	const [ errMsg, setErrMsg ] = useState('');
 
 	const handleInput = (e) => {
 		setState({
@@ -47,7 +48,8 @@ const SignUp = () => {
 			localStorage.setItem('token', data.token);
 			history.push(`/chat?name=${state.username}`);
 		} catch (err) {
-			console.log('error registering==>>>', err);
+			setErrMsg(err.response.data.error);
+			console.log('error registering==>>>', err.response.data.error);
 		}
 	};
 
@@ -74,6 +76,9 @@ const SignUp = () => {
 				<Button variant="contained" color="primary" type="submit">
 					Login
 				</Button>
+
+				<h1>{errMsg}</h1>
+
 				<br />
 				<br />
 				<h3>Don't Have an Account?</h3>
